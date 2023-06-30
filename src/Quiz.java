@@ -6,21 +6,37 @@ import javax.swing.*;
 public class Quiz implements ActionListener {
 
     String[] questions = {
-            "Which company created Java?",
-            "Which year was Java created?",
-            "What was Java originally called?",
-            "Does Pineapple belong on pizza?",
+            "What is Lady Gaga's real name?",
+            "In which year did Lady Gaga release her debut album?",
+            "What is the title of Lady Gaga's first hit single?",
+            "Which song by Lady Gaga won an Academy Award for Best Original Song?",
+            "How many Grammy Awards has Lady Gaga won?",
+            "Lady Gaga performed at the halftime show of which Super Bowl?",
+            "Which song by Lady Gaga became the best-selling digital single in the United States?",
+            "Lady Gaga has a fanbase known as what?",
+            "Lady Gaga's album \"The Fame\" includes the hit single \"Poker Face,\" but what was its follow-up single?",
+            "Lady Gaga's iconic meat dress was worn at which awards ceremony?"
+
+
     };
 
     String[][] options = {
-            {"Sun Microsystems", "Starbucks", "Microsoft", "Alphabet"},
-            {"1989", "1996", "1972", "2023"},
-            {"Apple", "Late", "Oak", "Koffing"},
-            {"Yes", "No", "Hell Yes!", "Hell No!"}
+            {"Stefani Joanne Angelica Germanotta", "Stefani Angelina Joanne Germanotta",
+                    "Stefani Joanne Angelina Germanotta", "BooBoo The Fool"},
+            {"1989", "2008", "2007", "2009"},
+            {"Poker Face", "Bad Romance", "Just Dance", "The Fame"},
+            {"Born This Way", "G.U.Y.", "The Cure", "Shallow"},
+            {"15","12","11","6"},
+            {"Super Bowl LI (51)","Super Bowl XLV (45)","Super Bowl LII (52)","Super Bowl XLIX (49)"},
+            {"Born This Way","Rain On Me","Bad Romance","Jewels N' Drugs"},
+            {"Little Critters","Little Monsters","Queers","Faggots"},
+            {"Beautiful Dirty Rich","Bad Romance","Telephone","LoveGame"},
+            {"MTV Video Music Awards","Grammy Awards","Academy Awards","Billboard Music Awards"}
+
     };
 
     char[] answers = {
-            'A', 'B', 'C', 'D'
+            'C', 'B', 'C', 'D', 'C', 'A', 'C', 'B', 'D', 'A'
     };
 
     char guess;
@@ -29,7 +45,7 @@ public class Quiz implements ActionListener {
     int correctGuesses = 0;
     int totalQuestions = questions.length;
     int result;
-    int seconds = 10;
+    int seconds = 20;
 
     JFrame frame = new JFrame();
     JTextField textField = new JTextField();
@@ -81,7 +97,7 @@ public class Quiz implements ActionListener {
         textArea.setWrapStyleWord(true);
         textArea.setBackground(new Color(25, 25, 25));
         textArea.setForeground(new Color(25, 255, 0));
-        textArea.setFont(new Font("MV Boli", Font.PLAIN, 25));
+        textArea.setFont(new Font("MV Boli", Font.PLAIN, 15));
         textArea.setBorder(BorderFactory.createBevelBorder(1));
         textArea.setEditable(false);
 
@@ -114,22 +130,22 @@ public class Quiz implements ActionListener {
         answerLabelA.setBounds(125, 100, 500, 100);
         answerLabelA.setBackground(new Color(50, 50, 50));
         answerLabelA.setForeground(new Color(25, 255, 0));
-        answerLabelA.setFont(new Font("MMV Boli", Font.PLAIN, 35));
+        answerLabelA.setFont(new Font("MMV Boli", Font.PLAIN, 25));
 
         answerLabelB.setBounds(125, 200, 500, 100);
         answerLabelB.setBackground(new Color(50, 50, 50));
         answerLabelB.setForeground(new Color(25, 255, 0));
-        answerLabelB.setFont(new Font("MMV Boli", Font.PLAIN, 35));
+        answerLabelB.setFont(new Font("MMV Boli", Font.PLAIN, 25));
 
         answerLabelC.setBounds(125, 300, 500, 100);
         answerLabelC.setBackground(new Color(50, 50, 50));
         answerLabelC.setForeground(new Color(25, 255, 0));
-        answerLabelC.setFont(new Font("MMV Boli", Font.PLAIN, 35));
+        answerLabelC.setFont(new Font("MMV Boli", Font.PLAIN, 25));
 
         answerLabelD.setBounds(125, 400, 500, 100);
         answerLabelD.setBackground(new Color(50, 50, 50));
         answerLabelD.setForeground(new Color(25, 255, 0));
-        answerLabelD.setFont(new Font("MMV Boli", Font.PLAIN, 35));
+        answerLabelD.setFont(new Font("MMV Boli", Font.PLAIN, 25));
 
         //Establish timer at bottom right corner of app
         secondsLeft.setBounds(535, 510, 100, 100);
